@@ -1,12 +1,15 @@
 import React from "react";
-import Hello from "./Components/Hello"
+import ReactDOM from "react-dom";
+import App from "./App";
+import StyleProvider from "./context/StyleProvider";
 
-const App=()=>{
-    return(
-        <div>
-         <Hello/>
-        </div>
-    )
-}
 
-export default App;
+
+
+ReactDOM.render(
+<StyleProvider>
+    <App/>
+</StyleProvider>
+,
+document.getElementById("root")
+)
